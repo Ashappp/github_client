@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dancing+Script%7CPT+Serif"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="allContent">
+      <form action="" class="boxForm">
+        <input
+          type="text"
+          class="inputFetch"
+          placeholder="Write name user or organization"
+        />
+        <input type="submit" class="inputFetchButton" value="Enter" />
+      </form>
+      <form action="" class="formFilter">
+        <label>
+          <input type="" class="inputStarFiltering" name="starFiltering" />Enter
+          star
+        </label>
+        <label>
+          <input type="radio" checked name="filter" class="showAll modifier" />
+          Show all
+        </label>
+        <label
+          ><input type="radio" name="filter" class="showFork modifier" />Filter
+          by fork
+        </label>
+        <label
+          ><input
+            type="radio"
+            name="filter"
+            class="showSources modifier"
+          />Filter by sources</label
+        >
+        <label
+          ><input type="radio" name="sortByName" class="sortName modifier" />
+          Sort by name</label
+        >
+        <label
+          ><input
+            type="radio"
+            name="sortByStar"
+            class="sortStar modifier"
+          />Sort by star</label
+        >
+        <input type="submit" class="showResult modifier" value="Show result" />
+      </form>
+      <ul class="ulAllCard"></ul>
+      <button class="showMore">Show more</button>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

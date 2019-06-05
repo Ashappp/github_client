@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.allContent {
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  background: url("https://www.mirf.ru/wp-content/uploads/2015/12/Homepage21.jpg")
+    no-repeat;
+  background-size: cover;
+}
+.boxForm {
+  width: 13rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+.span {
+  display: block;
+  font-size: 1rem;
+  border-bottom: 2px solid rgb(233, 235, 142);
+}
+.ulAllCard {
+  height: 31rem;
+  margin: 2rem auto 0 auto;
+  max-width: 35rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+
+.oneCard {
+  color: rgb(214, 214, 209);
+  height: 15rem;
+  width: 10rem;
+  border: 3px solid rgb(233, 235, 142);
+  list-style: none;
+  margin-top: 2rem;
+  background-color: rgb(91, 54, 116);
+}
+
+.inputFetch {
+  width: 13rem;
+  height: 2rem;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+.inputFetchButton {
+  width: 5rem;
+  height: 2rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 1rem;
+}
+.formFilter {
+  position: absolute;
+  top: 4rem;
+  left: 2rem;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 1rem;
+  font-weight: bold;
+  background-color: rgb(172, 165, 165);
+  box-shadow: 0rem 0rem 2rem 0.2rem black;
+}
+.inputStarFiltering {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.modifier {
+  margin-top: 1rem;
+}
+.showResult {
+  max-width: 8rem;
+  height: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.showMore {
+  position: absolute;
+  bottom: 4rem;
+  right: 2rem;
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: rgb(42, 160, 48);
+  box-shadow: 0rem 0rem 1rem 0.3rem black;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}
