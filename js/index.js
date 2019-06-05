@@ -26,26 +26,36 @@ function FetchAllRepositorys(e) {
   fetch(URL)
     .then(send => send.json())
     .then(data => {
+      renderOwner(data.items[0].owner);
       showMoreCard(data.items);
       drawAllRepositories(dataFetch);
+      console.log(dataFetch);
     })
     .catch(error => console.log(error));
+}
+
+function renderOwner(owner) {
+  const userPic = `<div class='ownerInfo'><img class = 'userPic' src =${
+    owner.avatar_url
+  }>
+      <h2 class='ownerName'>${owner.login}</h2></div>`;
+  ul.innerHTML = userPic;
 }
 
 function drawAllRepositories(arr) {
   const li = arr.reduce(
     (acc, el) =>
       acc +
-      `<li class='oneCard'><span class='span'>
-      Repository:${el.name}</span>
+      `<li class='oneCard'>
+      <a class='spanTitle' href=${el.html_url}>${el.name}</a>
       <span class='span'>Description: ${el.description}</span>
-      <span class='span'>Is a fork:  ${el.fork}</span>
-      <span class='span'>Count: ${el.stargazers_count}</span>
-      <span class='span'>Date update: ${el.updated_at}</span>
+      <span class='span'>Fork:  ${el.fork}</span>
+      <span class='span'>Star: ${el.stargazers_count}</span>
+      <span class='span'>Date update: ${el.updated_at.substr(0, 10)}</span>
       <span class='span'>Language: ${el.language}</span></li>`,
     ""
   );
-  ul.innerHTML = li;
+  ul.innerHTML += li;
 }
 
 function showMoreCard(arr) {
